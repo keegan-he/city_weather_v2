@@ -14,9 +14,8 @@
     background-color: var(--bgcolor);
     padding-top: -5px;
     padding-bottom: -9px;
-    padding-left: 10px;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
+    font-family: 'Monoton', cursive;
+    font-size: 5vw;
     color: rgb(34, 25, 42);
     text-shadow: 2px 2px 4px #00000012;
 }
@@ -56,7 +55,7 @@
     align-self: end;
     padding-top: 10px;
     /*border-style: dashed;*/
-    background-color: #c5fad9;
+    background-color: #06e1e7;
     justify-content: center;
     color: rgb(57, 57, 57);
     text-shadow: 2px 2px 4px #00000012;
