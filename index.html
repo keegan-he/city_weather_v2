@@ -15,7 +15,7 @@
 
 <body>
     <div class="Container">
-        <div class="Nav">CITY TEMPS</div>
+        <div class="Nav">Coin Prices</div>
         <div class="Box">
             <div class="GraphBox">
                 <div class="BarChart-bar" onclick="alert('Weather in Seattle = 56° F');" style="height: 56%">SEA </div>
@@ -28,9 +28,49 @@
                 <div class="BarChart-bar" onclick="alert('Weather in Denver = 74° F');" style="height: 74%">DNV </div>
             </div>
         </div>
-        <div class="Footer"></div>
-        <div class="BottomFoot"></div>
+        <div class="Footer">
+        </div>
+        <div class="BottomFoot">
+            <button onClick="doFetch()">Fetch data</button>
+        </div>
+        <section id="output">
+        </section>
     </div>
+
+    <script>
+        let state = {
+            /* Placeholder data until we add real data... */
+            data: [
+                {
+                    title: 'Nothing yet...',
+                    description: 'Nada...',
+                },
+            ],
+        };
+
+        function displayOutput() {
+            let output = document.querySelector('#output');
+            output.innerHTML = '';
+            for (let film of state.data) {
+                output.innerHTML += `
+                    <h1>${film.base}</h1>
+                    <p>${film.rates}</p>
+                `;
+            }
+        }
+
+        function doFetch() {
+            fetch('https://api.coinlore.com/api/tickers/')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    state.data = data;
+                    
+                });
+
+        }
+
+    </script>
 </body>
 
 </html>
