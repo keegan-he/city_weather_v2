@@ -18,14 +18,14 @@
         <div class="Nav">coin price</div>
         <div class="Box">
             <div class="GraphBox">
-                <div class="BarChart-bar" onclick="alert('Weather in Seattle = 56° F');" style="height: 56%">SEA </div>
-                <div class="BarChart-bar" onclick="alert('Weather in San Francisco = 61° F');" style="height: 61%">SF
+                <div class="BarChart-bar" onclick="alert('Weather in Seattle = 56° F');" style="height: 56%">BTC </div>
+                <div class="BarChart-bar" onclick="alert('Weather in San Francisco = 61° F');" style="height: 61%">LTC
                 </div>
-                <div class="BarChart-bar" onclick="alert('Weather in New York City = 47° F');" style="height: 47%">NY
+                <div class="BarChart-bar" onclick="alert('Weather in New York City = 47° F');" style="height: 47%">ETH
                 </div>
-                <div class="BarChart-bar" onclick="alert('Weather in St. Louis = 66° F');" style="height: 66%">STL
+                <div class="BarChart-bar" onclick="alert('Weather in St. Louis = 66° F');" style="height: 66%">XLM
                 </div>
-                <div class="BarChart-bar" onclick="alert('Weather in Denver = 74° F');" style="height: 74%">DNV </div>
+                <div class="BarChart-bar" onclick="alert('Weather in Denver = 74° F');" style="height: 74%">VEN </div>
             </div>
         </div>
         <div class="Footer">
@@ -38,8 +38,16 @@
     </div>
 
     <script>
-        let state = {
+
+        console.log('running javascript')
+        
+        
+        
+
             /* Placeholder data until we add real data... */
+/* 
+
+        let state = {
             data: [
                 {
                     title: 'Nothing yet...',
@@ -48,26 +56,45 @@
             ],
         };
 
+        
+/*      
+Old function-----  
         function displayOutput() {
+            console.log('running display output')
             let output = document.querySelector('#output');
             output.innerHTML = '';
             for (let film of state.data) {
                 output.innerHTML += `
-                    <h1>${film.base}</h1>
+                    <h1>${film.id}</h1>
                     <p>${film.rates}</p>
                 `;
             }
+        }
+*/
+
+let state = [];
+
+
+        function displayOutput() {
+            console.log('running display output function!')
+            console.log(state.data)
+            for (let x of state) {
+                console.log("id:")
+            }
+
+
         }
 
         function doFetch() {
             fetch('https://api.coinlore.com/api/tickers/')
                 .then(response => response.json())
                 .then(data => {
+                    console.log('i fetched the data!')
                     console.log(data);
                     state.data = data;
                     
+                    displayOutput();
                 });
-
         }
 
     </script>
