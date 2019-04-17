@@ -39,6 +39,7 @@
 .BottomFoot {
     background-color: var(--b_footerbg);
     height: 50px;
+    align-self: center;
 }
 
 .GraphBox {

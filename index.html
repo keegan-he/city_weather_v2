@@ -31,7 +31,7 @@
         <div class="Footer">
         </div>
         <div class="BottomFoot">
-            <button onClick="doFetch()">Fetch data</button>
+            <button onClick="doFetch()">Update Data</button>
         </div>
         <section id="output">
         </section>
@@ -77,10 +77,11 @@ let state = [];
 
         function displayOutput() {
             console.log('running display output function!')
-            console.log(state.data)
-            for (let x of state) {
-                console.log("id:")
+            console.log(state)
+            for (let x of state.data) {
+                console.log('the for loop is running');
             }
+
 
 
         }
@@ -91,7 +92,7 @@ let state = [];
                 .then(data => {
                     console.log('i fetched the data!')
                     console.log(data);
-                    state.data = data;
+                    state = data;
                     
                     displayOutput();
                 });
