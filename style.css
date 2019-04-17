@@ -16,8 +16,9 @@
     padding-bottom: -9px;
     font-family: 'Monoton', cursive;
     font-size: 5vw;
-    color: rgb(34, 25, 42);
+    color: rgb(221, 215, 226);
     text-shadow: 2px 2px 4px #00000012;
+    background-image: url("https://media.giphy.com/media/FetQWBKnGfk1G/giphy.gif");
 }
 
 .Box {
