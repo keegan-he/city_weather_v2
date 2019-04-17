@@ -16,6 +16,7 @@
     background-color: var(--bgcolor-nav);
     padding-top: -5px;
     padding-bottom: -9px;
+    padding-left: 2px;
     font-family: 'Monoton', cursive;
     font-size: 5vw;
     color: rgb(221, 215, 226);
