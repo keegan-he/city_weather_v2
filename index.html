@@ -40,50 +40,17 @@
     <script>
 
         console.log('running javascript')
-        
-        
-        
-
-            /* Placeholder data until we add real data... */
-/* 
-
-        let state = {
-            data: [
-                {
-                    title: 'Nothing yet...',
-                    description: 'Nada...',
-                },
-            ],
-        };
-
-        
-/*      
-Old function-----  
-        function displayOutput() {
-            console.log('running display output')
-            let output = document.querySelector('#output');
-            output.innerHTML = '';
-            for (let film of state.data) {
-                output.innerHTML += `
-                    <h1>${film.id}</h1>
-                    <p>${film.rates}</p>
-                `;
-            }
-        }
-*/
 
 let state = [];
 
 
         function displayOutput() {
             console.log('running display output function!')
-            console.log(state)
             for (let x of state.data) {
                 console.log('the for loop is running');
-                document.getElementById("output").innerHTML = state[0];
+                //console.log(x);
+                console.log(x.price_btc)
             }
-
-
 
         }
 
@@ -98,6 +65,8 @@ let state = [];
                     displayOutput();
                 });
         }
+
+        doFetch();
 
     </script>
 </body>
