@@ -42,7 +42,7 @@
     align-self: center;
 }
 
-.GraphBox {
+#GraphBox {
     display: grid;
     padding-top: 400px;
     padding-left: 5%;
