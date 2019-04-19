@@ -51,6 +51,17 @@ let state = [];
                 //console.log(x);
                 console.log(x.symbol)
                 console.log(x.price_usd)
+                for (let y of x.symbol) {
+                    let chart  = document.querySelector("#output");
+                    let height = 70;
+                    let bar = document.createElement("div");
+                    bar.classList.add("BarChart-bar")
+                    bar.style.height = height + "%";
+                    chart.appendChild(bar)
+                    console.log(bar)
+                }
+
+
             }
 
         }
