@@ -49,8 +49,11 @@ let state = [];
             for (let x of state.data) {
                 //console.log('the for loop is running');
                 //console.log(x);
-                console.log(x.symbol)
-                console.log(x.price_usd)
+                if (x.symbol === "BTC") {
+                    console.log("BTC price: ", x.price_usd)
+                }
+                //console.log(x.symbol)
+                //console.log(x.price_usd)
                 for (let y of x.symbol) {
                     let chart  = document.querySelector("#GraphBox");
                     let height = 70;
