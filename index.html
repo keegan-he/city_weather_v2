@@ -44,22 +44,24 @@
 let state = [];
 
 
-        function displayOutput() {
-            console.log('running display output function!')
-            for (let x of state.data) {
-                //console.log('the for loop is running');
-                //console.log(x);
-                if (x.symbol === "BTC") {
-                    console.log("BTC price: ", x.price_usd)
-                } else if (x.symbol === "LTC")
-                console.log("LTC price: ", x.price_usd); {
+            function displayOutput() {
+                console.log('running display output function!')
+                for (let x of state.data) {
+                    //console.log('the for loop is running');
+                    //console.log(x);
+                    if (x.symbol === "BTC") {
+                        console.log("BTC price: ", x.price_usd)
+                    } else if (x.symbol === "LTC") {
+                        console.log("LTC price: ", x.price_usd);
+                    } else if (x.symbol === "ETH") {
+                        console.log("ETH price: ", x.price_usd);
+                    }
 
-                
                 }
-
+            }
                 //console.log(x.symbol)
                 //console.log(x.price_usd)
-                
+
                 //for (let y of x.symbol) {
                 //    let chart  = document.querySelector("#GraphBox");
                 //    let height = 70;
@@ -71,9 +73,9 @@ let state = [];
                 //}
 
 
-            }
+            
 
-        }
+        
 
         function doFetch() {
             fetch('https://api.coinlore.com/api/tickers/')
