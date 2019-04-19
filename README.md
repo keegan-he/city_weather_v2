@@ -1,4 +1,5 @@
-# Crypto Prices
+# Weather APP / Crypto Prices - 
+#OUT of DATE
 
 ## Current crypto prices
 (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
