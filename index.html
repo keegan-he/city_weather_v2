@@ -51,18 +51,24 @@ let state = [];
                 //console.log(x);
                 if (x.symbol === "BTC") {
                     console.log("BTC price: ", x.price_usd)
+                } else if (x.symbol === "LTC")
+                console.log("LTC price: ", x.price_usd); {
+
+                
                 }
+
                 //console.log(x.symbol)
                 //console.log(x.price_usd)
-                for (let y of x.symbol) {
-                    let chart  = document.querySelector("#GraphBox");
-                    let height = 70;
-                    let bar = document.createElement("div");
-                    bar.classList.add("BarChart-bar")
-                    bar.style.height = height + "%";
-                    chart.appendChild(bar)
-                    console.log(bar)
-                }
+                
+                //for (let y of x.symbol) {
+                //    let chart  = document.querySelector("#GraphBox");
+                //    let height = 70;
+                //    let bar = document.createElement("div");
+                //    bar.classList.add("BarChart-bar")
+                //    bar.style.height = height + "%";
+                //    chart.appendChild(bar)
+                //    console.log(bar)
+                //}
 
 
             }
