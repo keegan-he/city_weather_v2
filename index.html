@@ -52,8 +52,10 @@
                     let heightsize = x.price_usd
                     let height = heightsize;
                     let bar = document.createElement("div");
+                    let name = x.symbol
                     bar.classList.add("BarChart-bar")
                     bar.style.height = height + "%";
+                    console.log(name)
                     chart.appendChild(bar)
                     console.log(bar)
 
@@ -104,7 +106,7 @@
                     chart.appendChild(bar)
                     console.log(bar)
 
-                    
+
                 }
             }
 
