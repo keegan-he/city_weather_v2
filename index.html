@@ -47,9 +47,10 @@ let state = [];
         function displayOutput() {
             console.log('running display output function!')
             for (let x of state.data) {
-                console.log('the for loop is running');
+                //console.log('the for loop is running');
                 //console.log(x);
-                console.log(x.price_btc)
+                console.log(x.symbol)
+                console.log(x.price_usd)
             }
 
         }
@@ -59,7 +60,7 @@ let state = [];
                 .then(response => response.json())
                 .then(data => {
                     console.log('i fetched the data!')
-                    console.log(data);
+                    //console.log(data);
                     state = data;
                     
                     displayOutput();
